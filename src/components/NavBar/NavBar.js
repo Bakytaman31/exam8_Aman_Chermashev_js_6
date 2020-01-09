@@ -12,19 +12,19 @@ const NavBar = () => {
                             <NavLink className="nav-link" to="/">All</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/starWars">Star Wars</NavLink>
+                            <NavLink className="nav-link" to="/category/Star Wars">Star Wars</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/jamesBond">James Bond</NavLink>
+                            <NavLink className="nav-link" to="/category/James Bond">James Bond</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/johnWick">John Wick</NavLink>
+                            <NavLink className="nav-link" to="/category/John Wick">John Wick</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/humor">Humor</NavLink>
+                            <NavLink className="nav-link" to="/category/Humor">Humor</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/motivation">Motivation</NavLink>
+                            <NavLink className="nav-link" to="/category/Motivation">Motivation</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/addQuote">Post Quote</NavLink>

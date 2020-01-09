@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import axiosQuotes from "../../axios-quotes";
-import NavBar from "../../components/NavBar/NavBar";
 import './AddQuote.css';
 
 class AddQuote extends Component {
     state = {
-        category: '',
+        category: 'Star Wars',
         author: '',
         quoteText: '',
     };
@@ -26,22 +25,32 @@ class AddQuote extends Component {
     render() {
         return (
                 <div>
-                    <NavBar/>
                     <form className="addQuote" onSubmit={this.postQuote}>
                         <h2>Add Quote</h2>
                         <p>Category</p>
-                        <input type="text" name="category" onChange={this.inputChange} list="category" autoComplete="off"/>
-                        <datalist id="category">
+                        <select name="category" onChange={this.inputChange}>
                             <option>Star Wars</option>
                             <option>James Bond</option>
                             <option>John Wick</option>
                             <option>Humor</option>
                             <option>Motivation</option>
-                        </datalist>
-                        <p>Author</p>
-                        <input type="text" name="author" onChange={this.inputChange} autoComplete='off'/>
-                        <p>Quote Text</p>
-                        <textarea cols="30" rows="10" name="quoteText" onChange={this.inputChange}/>
+                        </select>
+                        <p>
+                            <input type="text"
+                                   name="author"
+                                   onChange={this.inputChange}
+                                   autoComplete='off'
+                                   placeholder="Author"
+                                   style={{marginTop: "1%"}}
+                            />
+                        </p>
+                        <textarea
+                            cols="30"
+                            rows="10"
+                            name="quoteText"
+                            onChange={this.inputChange}
+                            placeholder="Quote Text"
+                        />
                         <p><button type="submit" className="btn btn-success">Save</button></p>
                     </form>
                 </div>
